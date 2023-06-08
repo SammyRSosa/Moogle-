@@ -67,7 +67,7 @@ public class Universo
     {
         foreach (string palabra in EveryWord.Keys)
         {
-            EveryWord[palabra] = ((float)Math.Log10(EveryWord[palabra]/ EveryDocument.Length));
+            EveryWord[palabra] = ((float)Math.Log10(EveryDocument.Length/EveryWord[palabra]));
         }
 
         foreach (string padre in Universe.Keys)

@@ -80,7 +80,7 @@ public class Snipet
 
         foreach (string key in keyValuePairs.Keys)
         {   
-            if(keyValuePairs[key] < bas)
+            if(keyValuePairs[key] > bas)
             {
                 resp = key;
                 bas = keyValuePairs[key];

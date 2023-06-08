@@ -50,7 +50,7 @@ public class Similarity
             Documentos[Tittle] = similitudelcoseno(Tittle,Universe,propiedadesdelquery.QuerycomoDocumento);
         }
 
-        var intermedio = Documentos.OrderBy(x => x.Value).Take(10);
+        var intermedio = Documentos.OrderByDescending(x => x.Value).Take(10);
         DocumentosRelacionados = intermedio.ToDictionary(x => x.Key, x => x.Value);
     }
     public static float similitudelcoseno(string Titulo,Dictionary<string,Dictionary<string,float>> Universe,Dictionary<string,float> QuerycomoDocumento)
