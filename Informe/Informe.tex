@@ -1,0 +1,53 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\author{Sammy Sosa}
+\title{Moogle!}
+
+\begin{document}
+\maketitle
+
+
+\section{Introduccion} 
+Este informe detalla el desarrollo del motor de búsqueda "Moogle" utilizando Visual Studio Code como entorno de desarrollo. Moogle es un proyecto que tiene como objetivo proporcionar una búsqueda eficiente y precisa en un conjunto de documentos utilizando un modelo vectorial y algoritmos conocidos como la distancia de Levenshtein. Además, se han implementado operadores especiales para facilitar la búsqueda y se utiliza principalmente la estructura de datos de diccionarios para su funcionamiento.
+
+
+\section{Detalles a destacar del proyecto}
+\begin{enumerate}
+  \item Modelo vectorial para la búsqueda
+  \item Algoritmo de distancia de Levenshtein
+  \item Implementación de operadores especiales
+  \item Uso de la estructura de datos de diccionarios
+  \item Sugerencias de palabras adecuadas
+\end{enumerate}
+
+
+\newpage 
+\section*{Modelo vectorial}
+El modelo vectorial es una técnica utilizada en la recuperación de información para representar documentos y consultas como vectores multidimensionales. En Moogle, se implementó este modelo para calcular la similitud entre documentos y consultas, lo que permite proporcionar resultados relevantes basados en la similitud de términos y la relevancia de los documentos.
+
+
+\section*{TFIDF}
+El entendimiento de estos vectores puede ser representado mediante el Term Frequency Inverse Document Frequency que le da un peso o importancia a cualquier palabra en un determinado universo de vectores.
+
+\section*{Operadores}
+Moogle incorpora varios operadores especiales para facilitar la búsqueda avanzada. Estos incluyen operadores para aumentar la importancia de ciertas palabras clave, bloquear palabras que no se deseen incluir en los resultados o especificar que una palabra debe aparecer en un documento para considerarlo relevante.
+
+\section*{Estructura de Datos}
+La estructura de datos de diccionarios es ampliamente utilizada en Moogle debido a su eficiencia para el almacenamiento, recuperación y procesamiento de información. Se utilizó un diccionario para indexar los documentos, almacenar información relevante y facilitar la recuperación de resultados de búsqueda.
+
+\section*{Sugerencias}
+Moogle también cuenta con un algoritmo de sugerencia de palabras, que proporciona una recomendación adicional basada en la consulta ingresada. Esto ayuda a los usuarios a realizar búsquedas más precisas y obtener resultados relevantes incluso si hay errores ortográficos o términos similares en la consulta.Todo esto es posible mediante el algoritmo de la distancia de Levenshtein el cual valora la cercania o igualdad de dos palabras.
+
+\newpage
+\section*{Resumen}
+Mediante el proyecto busque una manera rapida y poco repetitiva de analizar los documentos hasta que me encontre con la idea de analizar todos los documentos,la consulta,y cada pedazo de texto en cada documento como vectores de palabras de un universo que pueden pertenecer o no pertenecer o estar repetida otorgando diferentes puntuaciones mediante estos 3 aspectos.
+
+
+\section*{Conclusiones}
+El desarrollo del motor de búsqueda Moogle ha sido un proyecto exitoso. Utilizando Visual Studio Code se logró implementar un motor de búsqueda,ademas el codigo es lo suficientemente adaptable como para funcionar en otros tipos de ambientes mas especificos.
+
+\end{document}
