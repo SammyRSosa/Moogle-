@@ -1,0 +1,104 @@
+\documentclass{beamer}
+
+\usetheme{Madrid}
+
+\useoutertheme{miniframes}
+\useinnertheme{circles}
+
+\definecolor{UBCblue}{rgb}{0.04706, 0.13725, 0.26667}
+
+\usecolortheme[named=UBCblue]{structure}
+
+\title{MOOGLE!}
+\author{Sammy Sosa Justiz}
+
+\begin{document}
+
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Bienvenidos}
+  En este proyecto se busco crear un buscador de documentos que dada una consulta dictara mediante algoritmos antes utilizados la relevancia de los elementos de una base de datos.
+\end{frame}
+
+\begin{frame}
+    \frametitle{TF-IDF}
+    Este algoritmo es la base de mi busqueda y dara una manera practica de calificar a los documentos y las palabras que contienen su nombre consta de dos partes:
+
+    \begin{itemize}
+        \item Frecuencia de Término (TF)
+        \item Frecuencia Inversa de Documento (IDF)
+    \end{itemize}
+\end{frame}
+
+    
+\begin{frame}
+    \frametitle{Trabaja incluso antes de la consulta}
+  	Antes de incluso saber la consulta el proyecto ya accede la base de datos y la "datifica" guardando los puntajes que reciben mediante el ya mencionado TF-IDF.Los datos guardados estan normalizados ya que no es relevante el uso de cierto tipo de caracteres.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Recibiendo la consulta}
+    Una vez que se ha procesado la información, el programa puede realizar búsquedas.Primero buscando operadores que seguro resultaran utiles.Estos operadores hacen pequeños cambios a el tf-idf de la consulta que traen como resultado busquedas mas especificas.
+\end{frame}
+    
+\begin{frame}
+    \frametitle{Busqueda}
+    El proyecto descarta o separa rapidamente Documentos puntuados para con sus respectivas puntuaciones crear una lista que sera la entrega final.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Vale destacar}
+        \begin{itemize}
+            \item La sugerencia que busca palabras alternativas que pertenecen al universo de palabras y que se asemejan a la consulta.
+            \item Codigo a mi consideracion poco repetitivo y que aprovecha la informacion que acumula al maximo.
+            \item El codigo es facilmente adaptable a mejorar las que estoy seguro existen.
+        \end{itemize}
+\end{frame}
+  
+\begin{frame}
+    \frametitle{Operadores}
+        \begin{itemize}
+            \item Operador de Importancia "*"
+            \item Operador de Baneo "!"
+            \item Operador de Palabras Deseadas "\\ˆ"
+        \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Operadores de búsqueda}
+    \textbf{Operador de Importancia "*"}
+    Mediante este operador a una palabra se le dara x veces importancia en la busqueda dependiendo de la cantidad de veces que se use.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Operadores de búsqueda}
+    \textbf{Operador de Baneo "!"}
+    Se usa para indicar que esta palabra no debe aparecer en ningun resultado de la busqueda.
+\end{frame}
+    
+
+\begin{frame}
+    \frametitle{Operadores de búsqueda}
+    \textbf{Operador de aparición "\\ˆ"}
+    Se usa para indicar que esta palabra es tan relevante que si un documento no la posee no debe ni siquiera ser tomado en cuenta a la hora de brindar resultados.
+\end{frame}
+    
+    
+    \begin{frame}
+    \frametitle{Conclusiones}
+    Creo que se logro el objetivo principal y que el codigo logrado se basta para ofrecer resultados competentes a cualquiera que llegue a usarlo.
+
+    Invitamos a los usuarios a descargar y utilizar el programa para buscar archivos de texto en grandes conjuntos de datos.
+\end{frame}
+
+\begin{frame}
+  \frametitle{¡Gracias!}
+  Gracias por su atención.
+\end{frame}
+
+\end{document}
