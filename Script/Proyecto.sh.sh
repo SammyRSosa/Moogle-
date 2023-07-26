@@ -23,18 +23,32 @@ slides(){
 	cd Script
 }
 
-showreport(){
+show_report(){
 	clear
 	cd ..
 	cd Informe
-	xdg-open Informe.pdf
+	if [ -z "$1" ]
+	then
+		xdg-open Informe.pdf
+	else
+		$1 Informe.pdf
+	fi
+	cd ..
+	cd Script
 }
 
-showslides(){
+show_slides(){
 	clear
 	cd ..
 	cd Presentacion
-	xdg-open Presentacion.pdf
+	if [ -z "$1" ]; 
+	then
+		xdg-open Presentacion.pdf
+	else
+		$1 Presentacion.pdf
+	fi
+	cd ..
+	cd Script
 }
 
 clean(){
@@ -48,44 +62,4 @@ clean(){
 	cd Script
 }
 
-while true; do
-	clear
-	echo "Escoge la opcion que desees"
-	echo "1) run"
-	echo "2) report"
-	echo "3) slides"
-	echo "4) show report"
-	echo "5) show slides"
-	echo "6) clean"
-
-	read option
-
-	case $option in
-		"1")
-			run
-			read
-			;;
-		"2")
-			report
-			read
-			;;
-		"3")	
-			slides
-			read
-			;;
-		"4")
-			showreport
-			read
-			;;
-		"5")
-			showslides
-			read
-			;;
-		"6")	
-			clean
-			read
-			;;
-
-	esac
-done
-
+"$@"
